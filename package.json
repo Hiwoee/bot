@@ -1,0 +1,135 @@
+{
+  "name": "mewwme",
+  "version": "7.0.5",
+  "description": "The Discord music bot that's 100% free with no payment or votes required to access all its amazing functionalities.",
+  "exports": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "start:prod": "npm-run-all build:typescript build build:data && node ./dist/index.js",
+    "start:dev": "npm-run-all build:prettier build build:data && node ./dist/index.js",
+    "build": "tsc --build --verbose",
+    "build:typescript": "tsc --build --verbose",
+    "build:prettier": "prettier -w ./src",
+    "build:full": "npm-run-all build:prettier build build:data",
+    "start": "node ./dist/index.js",
+    "start:shard": "npm-run-all build:typescript build build:data && node ./dist/shard.js",
+    "start:docker": "tsx ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
+    "build:data": "node ./scripts/copyData.js",
+    "remove:slash": "node ./scripts/removeSlash.js",
+    "mewcard": "npm install mewcard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrmn7/mewwme.git"
+  },
+  "keywords": [
+    "discordbot",
+    "discord",
+    "mewwme",
+    "premium"
+  ],
+  "author": "lrmn",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lrmn7/mewwme/issues"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.database.json"
+    ],
+    "execMap": {
+      "ts": "tsx"
+    }
+  },
+  "homepage": "https://github.com/lrmn7/mewwme#readme",
+  "dependencies": {
+    "mewcard": "^1.6.5",
+    "mewwme-localpride": "^2.2.4",
+    "mewwme.player": "^3.0.0",
+    "mewwme.quick.db": "^9.1.6",
+    "axios": "^1.6.0",
+    "bufferutil": "^4.0.8",
+    "canvas": "^2.11.2",
+    "canvas-constructor": "^4.1.0",
+    "chalk": "^5.3.0",
+    "chillout": "^5.0.0",
+    "common-tags": "^1.8.2",
+    "discord-api-types": "^0.37.62",
+    "discord-hybrid-sharding": "^2.1.3",
+    "discord.js": "^14.14.1",
+    "express": "^4.18.2",
+    "express-ws": "^5.0.2",
+    "fast-xml-parser": "^4.3.2",
+    "fs-extra": "^11.1.1",
+    "genius-lyrics": "^4.4.6",
+    "humanize-duration": "^3.30.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "markdown-it": "^13.0.2",
+    "moment": "^2.29.4",
+    "mongoose": "^8.0.0",
+    "mysql2": "^3.6.3",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.0.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "plsargs": "^0.1.6",
+    "pretty-ms": "^8.0.0",
+    "recursive-readdir": "^2.2.3",
+    "shoukaku": "^4.0.1",
+    "stuffs": "^0.1.34",
+    "topgg-autoposter": "^2.0.1",
+    "@top-gg/sdk": "^3.1.6",
+    "utf-8-validate": "^5.0.2",
+    "voucher-code-generator": "^1.3.0",
+    "winston": "^3.11.0",
+    "write-file-atomic": "^5.0.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@digitak/tsc-esm": "^3.1.4",
+    "@types/chillout": "^5.0.4",
+    "@types/common-tags": "^1.8.3",
+    "@types/express": "^4.17.20",
+    "@types/express-cluster": "^0.0.3",
+    "@types/express-status-monitor": "^1.3.2",
+    "@types/express-ws": "^3.0.3",
+    "@types/fs-extra": "^11.0.3",
+    "@types/humanize-duration": "^3.27.2",
+    "@types/js-yaml": "^4.0.8",
+    "@types/lodash": "^4.14.200",
+    "@types/markdown-it": "^13.0.5",
+    "@types/node": "^20.8.10",
+    "@types/node-cron": "^3.0.11",
+    "@types/recursive-readdir": "^2.2.3",
+    "@types/voucher-code-generator": "^1.1.2",
+    "@types/ws": "^8.5.8",
+    "@types/yt-search": "^2.10.2",
+    "copy-dir": "^1.3.0",
+    "copyfiles": "^2.4.1",
+    "delay": "^6.0.0",
+    "dir-archiver": "^2.1.0",
+    "dotenv": "^16.3.1",
+    "esm": "^3.2.25",
+    "jszip": "^3.10.1",
+    "node": "^21.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "marked@<4.0.10": ">=4.0.10",
+      "undici@<5.26.2": ">=5.26.2"
+    }
+  }
+}

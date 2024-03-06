@@ -1,0 +1,181 @@
+# VERSION 7.0.0
+
+bot:
+  TOKEN: ${BOT_TOKEN}
+  EMBED_COLOR: "#ffffff"
+  OWNER_IDS: ["742457036914294855", "176144329046360064"] # you can add more ids
+  LANGUAGE: "en" # You can set it to en or you can customize it with your language
+  LIMIT_TRACK: 100 # The number of tracks you want to limit
+  LIMIT_PLAYLIST: 50 # The number of playlist you want to limit
+  DELETE_MSG_TIMEOUT: 5000
+  DEBUG_MODE: false
+# GENIUS API KEY FROM HERE: https://genius.com/api
+  GENIUS_APIKEY: "your genius api key"
+# APIKEY FROM https://api-ninjas.com/
+  QUOTES_API_KEY: "your quotes api key"
+
+# images for menu select commands
+  IMGURL_GUILDADD: "https://cdn.is-a.fun/madebytragic/welcy.png"
+  IMGURL_HELPMENU: "https://cdn.is-a.fun/madebytragic/welcy.png"
+  IMGURL_COMMANDMENU: "https://cdn.is-a.fun/madebytragic/intro.gif"
+  REQUEST_IMAGE: "https://cdn.is-a.fun/mewwme/bot/mewreq.png"
+
+# set music card settings
+# mewwme, themes1, themes2, themes3, themes4, themes5, themes6, themes7, themes8
+# themes9, themes10, themes11, themes12, themes13, themes14, themes15, themes16, themes17, themes18"
+  THEMES_MUSIC: "themes8"
+
+# set presence activity settings for bot
+  BOT_ACTIVITY1: "your heart 💖"
+  BOT_ACTIVITY2: "Music 24/7"
+  BOT_ACTIVITY3: "/help"
+  BOT_ACTIVITY_TYPE: 4 # 0 = PLAYING, 1 = STREAMING, 2 = LISTENING, 3 = WATCHING, 4 = CUSTOM. 5 = COMPETING
+  STREAM_URL: "https://www.youtube.com/watch?v=cpKL1AXaiFc" # set stream url activity, support url youtube, twitch 
+  BOT_STATUS: "idle" # online, idle, dnd, invisible
+  CUSTOM_STATUS: "MADE BY TRAGIC" # set custom status if type is 4
+
+# button link
+  SERVER_SUPPORT: "https://discord.gg/mewwme"
+  INVITE_URL: https://discord.com/api/oauth2/authorize?client_id=928711702596423740&permissions=826818292784&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2Fmewwme&scope=guilds.join+bot+applications.commands
+  VOTEURL: "https://top.gg/bot/928711702596423740"
+  DEVELOPER: "L RMN"
+  DEVELOPER_URL: "https://is-a.fun"
+  PATREON_URL: "https://www.patreon.com/mewwme"
+
+lavalink:
+  SEARCH_ENGINE: "youtube_music" # default ( youtube, youtube_music, soundcloud )
+# Your spotify id and secret, you can get it from here: https://developer.spotify.com/
+# If you don't have or don't want, you can disable it
+  SPOTIFY:
+    enable: true
+    id: "your spotify id"
+    secret: "your spotify secret"
+  DEFAULT: ["yoasobi", "one oke rock", "blackpink"]
+  NP_REALTIME: false # Enable this if you want to use realtime duation in nowplaying command
+  LEAVE_TIMEOUT: 3000 # The number of leave time you want
+  DEFAULT_VOLUME: 100 # only maks 100
+  
+ # If you don't have lavalink v4 you can use the lavalink or for other lavalinks you can join the discord server.
+  NODES:
+    [ # Region Asia/Jakarta
+      {
+        url: "34.87.36.193:2333",
+        name: "Mewwme1",
+        auth: "madebytragic",
+        secure: false,
+      },
+        # You can add more lavalink server!
+    ]
+  SHOUKAKU_OPTIONS:
+    {
+      moveOnDisconnect: true,
+      resumable: true,
+      resumableTimeout: 600,
+      reconnectTries: "Infinity",
+      restTimeout: 3000,
+    }
+
+
+features:
+# Note: If you enter an invalid driver, bot will use json driver as default
+# you can see sample config at README.md
+  DATABASE:
+    driver: "json" # mongodb, mysql, json, postgres
+    config: { path: "./mewwme.database.json" }
+
+  MESSAGE_CONTENT:
+    enable: true
+    commands:
+      enable: true
+      prefix: "me" # The prefix you want
+
+  AUTOFIX_LAVALINK: # Fix the lavalink server when the current is down
+    enable: true
+    reconnectTries: 3
+    restTimeout: 3000
+
+  WEB_SERVER:
+    enable: false
+    PORT: 3026
+# setup topp.gg vote logs eg. http:123.456.789:6969/vote
+    TOPGG_WEBHOOK_PORT: 6969
+    TOPGG_WEBHOOK_AUTH: "madebytragic"
+    TOPGG_GUILD_ID: "your guild id/server id"
+    TOPGG_VOTE_LOG_CHANNEL_ID: "1198207171075252305"
+    TOPGG_VOTE_IMG: "https://cdn.is-a.fun/bot/mewwme/vote.png"
+    BUTTON_NAME: "Vote Me"
+    EMOJI_ID: "1183159847227756564"
+    BUTTON_URL: "https://top.gg/bot/928711702596423740/vote"
+# statistics for bot with top.gg
+    TOPGG_TOKEN: "your top.gg token"
+    websocket:
+      enable: false
+      host: "0.0.0.0" # Default is 0.0.0.0
+      secret: "@me$^2wwme#%^#" # You must add your secret key to use ws. A secret key is anything you want
+      auth: false
+      trusted: ["http://localhost:3000"]
+
+# Emoji config for discord message content in select menu
+# https://discord.gg/2pkvB82NaS join the discord server if you want to use existing emoji
+Emoji:
+  E_HOME: "<:home:1184833921599426561>"
+  E_ADMIN: "<:admin:1184833936573071372>"
+  E_UTILS: "<:utils:1203647537567760394>"
+  E_SETTING: "<:settings:1181964105679118386>"
+  E_FILTER: "<:filter:1181959139681914910>"
+  E_PLAYLIST: "<:playlist:1181959342661054464>"
+  E_ALLCMD: "<:categories:1184834336357372065>"
+  E_MUSIC: "<:playmusic:1181959378484600912>"
+  E_INFO: "<:info:1181963490550886490>"
+  E_INVITE: "<:invite:1181964127422390355>"
+  E_SUPPORT: "<:supports:1183064670337241118>"
+  E_VOTE: "<:topgg:1181996021555920927>"
+
+
+ServerSupport:
+# set channel support for bot event
+  UPDATE_CHANNEL_ID: "your channel id"
+  SUGGESTION_CHANNEL_ID: "your channel id"
+  BUG_REPORT_CHANNEL_ID: "your channel id"
+# set webhook url settings for bot guild add/guild remove logs
+  JOIN_LEAVE_LOGS: "your webhook url"
+# set webhook url settings for redeem logs
+  REDEEM_LOGS: "your webhook url"
+
+# WELCOMER LOGS MEMBER JOIN & LEAVE
+# Welcome message change with languages check utilities.yaml
+WelcomerEvents:
+  GUILD_ID: "your guild id"
+  WELCOME_CHANNEL_ID: "your channel id"
+  LEAVE_CHANNEL_ID: "your channel id"
+  GREETINGS:
+    welcome: [ "Hi", "Hallo", "Heyho", "Hola" ]
+    bye: [ "Adiós", "Bye", "Sayonara" ]
+  COLOR_GREETINGS: "#ffffff"
+  COLOR_USERNAME: "#12d760"
+  BUTTON_NAME: "Vote Me"
+  EMOJI_ID: "1183159847227756564"
+  BUTTON_URL: "https://top.gg/bot/928711702596423740/vote"
+  
+# i set canvas images size 1920px X 480px
+ImagesWelcomer:
+  IMAGES1: "https://cdn.is-a.fun/bot/mewwme/welcomer/1.png"
+  IMAGES2: "https://cdn.is-a.fun/bot/mewwme/welcomer/2.png"
+  IMAGES3: "https://cdn.is-a.fun/bot/mewwme/welcomer/3.png"
+  IMAGES4: "https://cdn.is-a.fun/bot/mewwme/welcomer/4.png"
+  IMAGES5: "https://cdn.is-a.fun/bot/mewwme/welcomer/5.png"
+  IMAGES6: "https://cdn.is-a.fun/bot/mewwme/welcomer/6.png"
+  IMAGES7: "https://cdn.is-a.fun/bot/mewwme/welcomer/7.png"
+  IMAGES8: "https://cdn.is-a.fun/bot/mewwme/welcomer/8.png"
+  IMAGES9: "https://cdn.is-a.fun/bot/mewwme/welcomer/9.png"
+  IMAGES10: "https://cdn.is-a.fun/bot/mewwme/welcomer/10.png"
+  IMAGES11: "https://cdn.is-a.fun/bot/mewwme/welcomer/11.png"
+  IMAGES12: "https://cdn.is-a.fun/bot/mewwme/welcomer/12.png"
+  IMAGES13: "https://cdn.is-a.fun/bot/mewwme/welcomer/13.png"
+  IMAGES14: "https://cdn.is-a.fun/bot/mewwme/welcomer/14.png"
+  IMAGES15: "https://cdn.is-a.fun/bot/mewwme/welcomer/15.png"
+  IMAGES16: "https://cdn.is-a.fun/bot/mewwme/welcomer/16.png"
+  IMAGES17: "https://cdn.is-a.fun/bot/mewwme/welcomer/17.png"
+  IMAGES18: "https://cdn.is-a.fun/bot/mewwme/welcomer/18.png"
+  IMAGES19: "https://cdn.is-a.fun/bot/mewwme/welcomer/19.png"
+  IMAGES20: "https://cdn.is-a.fun/bot/mewwme/welcomer/20.png"
