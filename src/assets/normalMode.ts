@@ -1,0 +1,15 @@
+export const NormalModeIcons = {
+  play: "<:play:1183298549337821235>",
+  pause: "<:pause:1183298721279127572>",
+  loop: "<:meloop:1187405103561457875>",
+  shuffle: "<:shuffle:1181963589377077319>",
+  stop: "<:stop:1181959585288957972>",
+  skip: "<:skipup:1181959549448630373>",
+  previous: "<:skipback:1181959531236962385>",
+  voldown: "<:voldown:1181959630058962976>",
+  volup: "<:volup:1181959644541898803>",
+  arrow_next: "<:next:1181959241880326144>",
+  arrow_previous: "<:back:1181959037227630644>",
+  queue: "<:playlist:1181959342661054464>",
+  delete: "<:bin:1181963444883312740>",
+};
