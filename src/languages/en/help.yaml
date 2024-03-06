@@ -1,0 +1,44 @@
+# mention introduce
+intro1: "**The Discord music bot that's 100% free with no payment or votes required to access all its amazing functionalities.**"
+prefix: |
+  ・Bot prefix for this server is `%{prefix}`
+  ・Change prefix with `%{prefix} prefix <new prefix>`
+  ・Play a track by link or search term `%{prefix} play`
+  ・Play a lofi music with `%{prefix} lofi`
+  ・Play radio with `%{prefix} radio`
+  Type `%{prefix} help` command for more commands.
+intro2: |
+  %{bot} requires `administrator` permissions,
+  If you want to disable Administrator permission from %{bot}, it will not work properly! You will still be able to listen to basic music features but some things won't work.
+
+  **Help Support**
+  Join our **[support server](%{serversupport})** if you need help, want to get information about updates and issues or want to engage in community discussions with the developers!
+
+# message that the bot will send if it has just joined the server
+introadd1: "**Thankyou for adding me to your server, here are some commands you can use**"
+prefixadd: |
+  ・Bot prefix for this server is `%{prefix}`
+  ・Change prefix with `%{prefix} prefix <new prefix>`
+  ・Play a track by link or search term `%{prefix} play`
+  ・Play a lofi music with `%{prefix} lofi`
+  ・Play radio with `%{prefix} radio`
+  Type `%{prefix} help` command for more commands.
+
+introadd2: |
+  %{bot} requires `administrator` permissions,
+  If you want to disable Administrator permission from %{bot}, it will not work properly! You will still be able to listen to basic music features but some things won't work.
+  Type `%{prefix} help` command for more commands.
+
+  **Help Support**
+  Join our **[support server](%{serversupport})** if you need help, want to get information about updates and issues or want to engage in community discussions with the developers!
+
+#Homepage Help menu
+homepage_title: "The Discord music bot that's 100% free with no payment or votes required to access all its amazing functionalities."
+homepage_desc: |
+  <:blank:1184828467326496848><:playmusic:1181959378484600912> **Music 24/7**
+  <:blank:1184828467326496848><:filter:1181959139681914910> **Music Filters**
+  <:blank:1184828467326496848><:playlist:1181959342661054464> **Music Playlist**
+  <:blank:1184828467326496848><:premium:1183159847227756564> **Unlock Premium Features**
+  <:blank:1184828467326496848><:pop:1181959430980501524> **YT, SC, Spotify, Twitch, Bandcamp & More...**
+
+  <a:mehelp:1186605325835579432> **Do you want to customize bot? [Patreon](%{patreon})**
